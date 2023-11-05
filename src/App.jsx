@@ -23,7 +23,7 @@ import image7 from '../public/images/image-7.webp';
 import image8 from '../public/images/image-8.webp';
 import image9 from '../public/images/image-9.webp';
 import imgPlaceholder from '../public/images/img-placeholder.png';
-import Sortable from './Sortable';
+import Sortable from './Components/Sortable';
 import { generateUUID } from './utils/UUIDgenerator';
 
 const imageArray = [
@@ -90,41 +90,54 @@ export default function App() {
    const onDragEndHandler = (e) => {
       const { active, over } = e;
 
+      // check if the active and over elements have different IDs
       if (active.id !== over.id) {
          setImages((items) => {
+            // find the index of the active element
             const activeIndex = images.findIndex(
                (item) => item.id === active.id
             );
             const overIndex = images.findIndex((item) => item.id === over.id);
 
+            // move the active element to the position of the over element
             return arrayMove(items, activeIndex, overIndex);
          });
       }
    };
 
    const handleImageDelete = () => {
+      // filter out the images that are not selected
       const newImages = images.filter((item) => !item.isSelected);
       setImages(newImages);
    };
 
-   const handleSelectItem = (e, id) => {
-      const { checked } = e.target;
-      const newItems = [...images];
-      const findInx = images.findIndex((img) => img.id === id);
-      newItems[findInx].isSelected = checked;
-      setImages(newItems);
+   const handleSelectItem = ({ target: { checked } }, id) => {
+      // update the images state based on the previous state (prevImages)
+      setImages((prevImages) => {
+         // the map function to create a new array with updated isSelected property
+         return prevImages.map((item) =>
+            item.id === id ? { ...item, isSelected: checked } : item
+         );
+      });
    };
 
-   const handleImageChange = (event) => {
-      const file = event.target.files[0];
-      const imageUrl = URL.createObjectURL(file);
-      const newImg = {
-         id: generateUUID(),
-         img: imageUrl,
-         isSelected: false,
-      };
+   const handleImageUpload = ({ target: { files } }) => {
+      const file = files[0];
 
-      setImages((prev) => [...prev, newImg]);
+      // check if a file is selected and if it is an image
+      if (file && file.type.startsWith('image/')) {
+         setImages((prevImages) => [
+            ...prevImages,
+            {
+               id: generateUUID(), // generate a unique ID for the image
+               img: URL.createObjectURL(file),
+               isSelected: false,
+            },
+         ]);
+      } else {
+         // handle invalid file type or no file selected
+         alert('Invalid file type or no file selected!');
+      }
    };
 
    const handleDragCancel = () => {
@@ -137,14 +150,18 @@ export default function App() {
       <section className="max-w-[1220px] border-2 border-[#e7e1e1] mx-auto my-10 rounded">
          <div className="flex items-center justify-between px-8 border-b-2 py-5">
             <span className="text-2xl font-semibold">
-               {selectedItemsCount} Files Selected
+               {selectedItemsCount > 0
+                  ? `${selectedItemsCount} Files Selected`
+                  : 'Gallery'}
             </span>
-            <span
-               onClick={handleImageDelete}
-               className="text-lg text-red-500 capitalize font-semibold cursor-pointer"
-            >
-               Delete files
-            </span>
+            {selectedItemsCount > 0 && (
+               <span
+                  onClick={handleImageDelete}
+                  className="text-lg text-red-500 capitalize font-semibold cursor-pointer hover:border-b-2 border-red-500"
+               >
+                  Delete files
+               </span>
+            )}
          </div>
          <div className="grid grid-cols-12 sm:grid-cols-10 gap-3 md:gap-6 px-5 md:px-8 py-8 md:py-10">
             <DndContext
@@ -179,7 +196,7 @@ export default function App() {
                   <img className="w-14 mx-auto" src={imgPlaceholder} alt="" />
                </label>
                <input
-                  onChange={handleImageChange}
+                  onChange={handleImageUpload}
                   id="fileInput"
                   type="file"
                   className="hidden"
