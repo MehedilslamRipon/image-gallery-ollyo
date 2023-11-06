@@ -22,6 +22,8 @@ import image6 from '../public/images/image-6.webp';
 import image7 from '../public/images/image-7.webp';
 import image8 from '../public/images/image-8.webp';
 import image9 from '../public/images/image-9.webp';
+import image10 from '../public/images/image-10.webp';
+import image11 from '../public/images/image-11.webp';
 import imgPlaceholder from '../public/images/img-placeholder.png';
 import SortableItem from './Components/SortableItem';
 import { generateUUID } from './utils/UUIDgenerator';
@@ -70,6 +72,16 @@ const imageArray = [
    {
       id: 'c2629c23-177a-467f-bf6e-fd8e9d81c8a0',
       img: image9,
+      isSelected: false,
+   },
+   {
+      id: 'a7c9f7c3-4a9a-4e4a-9a8a-9a5b9a8a8a8a',
+      img: image10,
+      isSelected: false,
+   },
+   {
+      id: '8490481a-2c71-4238-b49d-51af7c15d6eb',
+      img: image11,
       isSelected: false,
    },
 ];
