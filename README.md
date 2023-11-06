@@ -1,9 +1,9 @@
 📝 **Documentation for Ollyo Image Gallery Task**
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
+- [Installation](#installation)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Functionality](#functionality)
@@ -15,10 +15,51 @@ The Ollyo Image Gallery Task required implementing a ReactJS image gallery with 
 
 ## Technologies Used
 
-- ViteJS
-- ReactJS
-- Tailwind CSS
-- DND Kit (third-party library for drag-and-drop functionality)
+- ViteJS: ViteJS is used as the development server and bundler for the ReactJS application.
+- ReactJS: The application is built using the ReactJS library, which provides a component-based architecture for building user interfaces.
+- Tailwind CSS: Tailwind CSS is used for styling the user interface. It provides a utility-first approach to CSS and enables rapid UI development.
+- DND Kit: DND Kit is a third-party library used to implement drag-and-drop functionality for reordering images in the gallery.
+- Vercel: A cloud platform that enables developers to host websites and web services.
+
+## Installation
+
+To install the project using either Yarn or npm, follow the steps below:
+
+1. Clone the repository to your local machine or download the source code as a ZIP file.
+
+2. Open a terminal and navigate to the project's root directory.
+
+3. Install the project dependencies by executing either of the following commands:
+
+   Using Yarn:
+   ```
+   yarn install
+   ```
+
+   Using npm:
+   ```
+   npm install
+   ```
+
+   This command will download and install all the required packages and dependencies defined in the `package.json` file.
+
+4. Once the installation is complete, you can start the development server by running either of the following commands:
+
+   Using Yarn:
+   ```
+   yarn dev
+   ```
+
+   Using npm:
+   ```
+   npm run dev
+   ```
+
+   This command will compile the project and start a local development server. You can access the running application by visiting `http://localhost:3000` in your browser.
+
+5. Voila! You have successfully installed and started the Ollyo Image Gallery Task project locally.
+
+If you encounter any issues during the installation process, feel free to ask for further assistance.
 
 ## Project Structure
 

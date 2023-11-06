@@ -154,6 +154,7 @@ export default function App() {
                   ? `${selectedItemsCount} Files Selected`
                   : 'Gallery'}
             </span>
+            {/* delete button */}
             {selectedItemsCount > 0 && (
                <span
                   onClick={handleImageDelete}
