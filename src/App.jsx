@@ -92,7 +92,9 @@ export default function App() {
 
    const sensors = useSensors(
       useSensor(MouseSensor, { activationConstraint: { distance: 5 } }),
-      useSensor(TouchSensor)
+      useSensor(TouchSensor, {
+         activationConstraint: { distance: 5 },
+      })
    );
 
    const handleDragStart = (e) => {
