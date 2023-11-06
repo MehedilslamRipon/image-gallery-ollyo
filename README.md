@@ -100,6 +100,12 @@ The project was structured with two main components, and a unique id generator f
 4. **Setting Feature Image:**
    - The first image (from left to right) is considered the featured image.
    - The feature image is displayed larger and visually distinct from other images.
+  
+5. **Uploading new images:**
+   - Click on the "Add Images" button located at the bottom right corner of the gallery.
+   - A file selection dialog box will appear.
+   - Navigate to the image file you wish to upload and select it.
+   - Click on the "Open" button.
 
 ## Functionality
 
@@ -121,11 +127,15 @@ The project was structured with two main components, and a unique id generator f
    - Users could set a different image as the feature image by dragging it to the desired position in the gallery.
    - The feature image was visually distinct from the other images, ensuring clear identification.
 
-5. **User Experience**
+5. **Adding New Images**
+   - A user-friendly "Add New Image" feature was implemented, enhancing user interaction and flexibility.
+   - A dedicated "Add Images" button was placed in the bottom right corner of the gallery, easily accessible to users. Upon clicking the "Add Images" button, users were prompted to upload images from their devices.
+
+6. **User Experience**
    - Efforts were made to ensure a smooth and responsive user experience.
    - Transitions and animations were implemented to enhance the look and feel of the gallery.
   
-6. **Deployment**
+7. **Deployment**
    - The implemented ReactJS image gallery was hosted on Vercel.
    - Live demo - [Ollyo Image Gallery](https://ollyo-image-gallery-mehedi.vercel.app/).
 
