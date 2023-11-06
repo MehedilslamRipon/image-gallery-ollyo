@@ -1,5 +1,14 @@
 📝 **Documentation for Ollyo Image Gallery Task**
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Functionality](#functionality)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 The Ollyo Image Gallery Task required implementing a ReactJS image gallery with specific functionalities such as a gallery layout, sorting, deleting multiple images, setting a feature image, smooth user experience, and hosting a live demo. The task was successfully completed using ViteJS, ReactJS, and Tailwind CSS.
@@ -29,6 +38,22 @@ The project was structured with two main components, and a unique id generator f
    - 
 3. **UUIDgenerator.js**
    - This JavaScript function generates a UUID using the current timestamp and a random number. It replaces certain characters in a predefined format with random hexadecimal digits, and returns a UUID.
+
+## Usage
+
+1. **Selecting Images:**
+   - Users can select multiple images by clicking the checkbox associated with each image.
+  
+2. **Deleting Images:**
+   - Selected images can be deleted using the delete button.
+
+3. **Reordering Images:**
+   - Users can reorder images by dragging and dropping them within the gallery.
+   - Dragging an image indicates its position, and dropping it updates the gallery order.
+  
+4. **Setting Feature Image:**
+   - The first image (from left to right) is considered the featured image.
+   - The feature image is displayed larger and visually distinct from other images.
 
 ## Functionality
 
