@@ -1,5 +1,6 @@
 {
    "name": "ollyo-image-gallery",
+   "author": "Mehedi Islam Ripon",
    "private": true,
    "version": "0.0.0",
    "type": "module",

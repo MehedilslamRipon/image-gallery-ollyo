@@ -164,6 +164,7 @@ export default function App() {
                </span>
             )}
          </div>
+         {/* gallery image wrapper */}
          <div className="grid grid-cols-12 sm:grid-cols-10 gap-3 md:gap-6 px-5 md:px-8 py-8 md:py-10">
             <DndContext
                collisionDetection={closestCenter}

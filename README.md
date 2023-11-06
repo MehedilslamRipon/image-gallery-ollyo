@@ -1,9 +1,11 @@
 📝 **Documentation for Ollyo Image Gallery Task**
 
 ## Table of Contents
+- [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
+- [Live Demo](#live-demo)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Functionality](#functionality)
@@ -60,6 +62,9 @@ To install the project using either Yarn or npm, follow the steps below:
 5. Voila! You have successfully installed and started the Ollyo Image Gallery Task project locally.
 
 If you encounter any issues during the installation process, feel free to ask for further assistance.
+
+## Live Demo
+- The live demo of the project can be accessed at the following URL: [https://ollyo-image-gallery-mehedi.vercel.app/](https://ollyo-image-gallery-mehedi.vercel.app/).
 
 ## Project Structure
 
@@ -120,9 +125,9 @@ The project was structured with two main components, and a unique id generator f
    - Efforts were made to ensure a smooth and responsive user experience.
    - Transitions and animations were implemented to enhance the look and feel of the gallery.
   
-6. **Live Demo**
+6. **Deployment**
    - The implemented ReactJS image gallery was hosted on Vercel.
-   - The live demo of the project can be accessed at the following URL: [https://reactjs-task-ollyo-mehedi.vercel.app/](https://reactjs-task-ollyo-mehedi.vercel.app/).
+   - Live demo - [Ollyo Image Gallery](https://ollyo-image-gallery-mehedi.vercel.app/).
 
 ## Conclusion
 
