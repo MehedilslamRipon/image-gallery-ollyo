@@ -23,7 +23,7 @@ import image7 from '../public/images/image-7.webp';
 import image8 from '../public/images/image-8.webp';
 import image9 from '../public/images/image-9.webp';
 import imgPlaceholder from '../public/images/img-placeholder.png';
-import Sortable from './Components/Sortable';
+import SortableItem from './Components/SortableItem';
 import { generateUUID } from './utils/UUIDgenerator';
 
 const imageArray = [
@@ -175,7 +175,7 @@ export default function App() {
             >
                <SortableContext strategy={rectSortingStrategy} items={images}>
                   {images?.map((item, index) => (
-                     <Sortable
+                     <SortableItem
                         handleSelectItem={handleSelectItem}
                         key={item.id}
                         {...item}
@@ -186,24 +186,32 @@ export default function App() {
                </SortableContext>
                <DragOverlay adjustScale>
                   {activeId && (
-                     <Sortable
+                     <SortableItem
                         img={images.find((item) => item.id === activeId)?.img}
                         isDragging
                      />
                   )}
                </DragOverlay>
             </DndContext>
-            <div className="col-span-2 border-2 border-dashed border-[#B0B0B0] text-center rounded flex flex-col justify-center">
-               <label htmlFor="fileInput">
-                  <img className="w-14 mx-auto" src={imgPlaceholder} alt="" />
-               </label>
-               <input
-                  onChange={handleImageUpload}
-                  id="fileInput"
-                  type="file"
-                  className="hidden"
-               />
-               <h3 className="font-semibold">Add Images</h3>
+            <div className="col-span-4 sm:col-span-2 w-full h-full flex items-center justify-center border-2 border-dashed border-[#B0B0B0] rounded overflow-hidden">
+               <div className="w-full flex flex-col items-center justify-center py-5 sm:py-5 lg:py-11 xl:py-14">
+                  <label htmlFor="fileInput">
+                     <img
+                        className="w-14 mx-auto"
+                        src={imgPlaceholder}
+                        alt="Add Image"
+                     />
+                  </label>
+                  <input
+                     onChange={handleImageUpload}
+                     id="fileInput"
+                     type="file"
+                     className="hidden"
+                  />
+                  <span className="font-semibold sm:text-xs md:text-base">
+                     Add Image
+                  </span>
+               </div>
             </div>
          </div>
       </section>

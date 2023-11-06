@@ -1,6 +1,6 @@
 📝 **Documentation for Ollyo Image Gallery Task**
 
-[![Alt text](https://i.ibb.co/6sj8Chk/Ollyo-Image-Gallery-Mehedi-Islam-Ripon.png)](https://ollyo-image-gallery-mehedi.vercel.app/)
+[![Ollyo photo gallery banner image](https://i.ibb.co/6sj8Chk/Ollyo-Image-Gallery-Mehedi-Islam-Ripon.png)](https://ollyo-image-gallery-mehedi.vercel.app/)
 
 ## Table of Contents
 
